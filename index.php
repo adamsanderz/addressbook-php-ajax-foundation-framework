@@ -55,7 +55,11 @@
         </div>
       </div>
     </div>
-    
+
+    <!-- Loader Image -->
+    <div id="loaderImage"><img src="img/loader.gif"></div>
+    <!-- Main Content-->
+    <div id="pageContent"></div>
     
     <script src="js/vendor/jquery.js"></script>
     <script src="js/script.js"></script>
