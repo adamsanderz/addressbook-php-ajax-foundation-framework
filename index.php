@@ -57,7 +57,7 @@
     </div>
 
     <!-- Loader Image -->
-    <div id="loaderImage"><img src="img/loader.gif"></div>
+    <div id="loaderImage"><img src="img/orange_loader.gif" /> Loading...</div>
     <!-- Main Content-->
     <div id="pageContent"></div>
     
