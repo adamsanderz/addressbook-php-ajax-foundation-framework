@@ -49,7 +49,7 @@
             <div class="row">
               <div class="large-12 columns"><label>Notes<textarea name="notes" placeholder="Enter Optional Notes"></textarea></label></div>
             </div>
-            <input name="submit" type="submit" class="add-btn button right small" value="Submit" />
+            <input name="submit" type="submit" class="add-btn button right small" value="Add Contact" />
             <a class="close-reveal-modal">&#215;</a>
           </form>
         </div>
