@@ -36,27 +36,37 @@ $(document).ready(function(){
 	});
 
 	//Delete contact
-		//Edit contact
-	$(document).on('click','#deleteContact',function(){
+		$(document).on('click','#deleteContact',function(){
 		//Show Loader Image
 		$('#loaderImage').show();
 
-		//Define variables
-		var link = $("#deleteRecord");
-		var formData = new FormData();
-    
-	    // perform validations
-    
-    	// append to formData
-		formData.append("contact_id", link.attr("data-contact-id");
-
-		//Post data from form
-		$.post("delete_contact.php",formData.serialize())
-			.done(function(data){
-				console.log(data);
-				showContacts();
-			});
-			return false;
+		//Define variables postdata, that will be submitted as post variable
+		var postData = {};
+		//Loop through all the data-elements when we don't know no of attributes
+		//$.each($(this).data(), function(k,v) {
+		//    postData[k] = v;
+		//});
+		postData[cid] = $(this).data('cid');
+        $.ajax({
+        	//crossDomain: true,
+        	//cache: false,
+            type: 'POST',
+            url: 'delete_contact.php',
+            data: postData,
+            //data: {"cid":cid}, 
+            //contentType:"application/json; charset=utf-8",
+            //dataType: "json",
+            success: function (data) {
+                console.log(data); //data comming from echo of delete_contact
+                showContacts();
+            },
+            error: function (xhr, reason, ex) {
+				var err = $.parseJSON(xhr.responseText);
+				if (err != null && xhr.status.toString() != "0") {
+					showerror('Error Code : ' + xhr.status + "\nError Message :" + xhr.statusText);
+				}
+			}
+        });
 	});
 });
 
