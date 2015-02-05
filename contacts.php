@@ -75,6 +75,7 @@ $contacts = $db->resultset();
                     <div class="row">
                       <div class="large-12 columns"><label>Notes<textarea name="notes" placeholder="Enter Optional Notes"><?php echo $contact->notes; ?></textarea></label></div>
                     </div>
+                    <input type="hidden" name="id" value="<?php echo $contact->id; ?>" />
                     <input name="submit" type="submit" class="add-btn button right small" value="Submit" />
                     <a class="close-reveal-modal">&#215;</a>
                   </form>
