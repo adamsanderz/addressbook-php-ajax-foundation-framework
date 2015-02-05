@@ -8,10 +8,10 @@ $db = new Database;
 $db->query('delete from contacts where id = :id');
 
 //Bind values to vars
-$db->bind(':id', $_POST['id']);
+$db->bind(':id', $_POST['cid']);
 
 if($db->execute()){
-	echo "Contact was deleted";
+	echo "Congratulations! Contact was deleted.";
 } else {
 	echo "Could not delete Contact";
 }
