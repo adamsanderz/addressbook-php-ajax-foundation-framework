@@ -1,3 +1,5 @@
+<?php include('core/init.php'); ?>
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
