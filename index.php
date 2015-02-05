@@ -36,12 +36,9 @@
                 <div class="large-4 columns"><label>City <input name="city" type="text" placeholder="Enter Email address" /></label></div>
                 <div class="large-4 columns"><label>District
                   <select name="district">
-                    <option value="Kathmandu">Kathmandu</option>
-                    <option value="Lalitpur">Lalitpur</option>
-                    <option value="Bhaktapur">Bhaktapur</option>
-                    <option value="Kaski">Kaski</option>
-                    <option value="Gorkha">Gorkha</option>
-                    <option value="Chitwan">Chitwan</option>
+                    <?php foreach ($districts as $key => $value): ?>
+                      <option value="<?php echo $key; ?>" <?php echo $key==$district?'selected':''; ?> ><?php echo $value?></option>
+                    <?php endforeach; ?> 
                   </select>
                 </label></div>
                 <div class="large-4 columns"><label>Zone/State <input name="state" type="text" placeholder="Enter Zone or State" /></label></div>
