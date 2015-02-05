@@ -23,5 +23,7 @@ $db->bind(':contact_group',$_POST['contact_group']);
 
 if($db->execute()){
 	echo "Contact was added";
+} else {
+	echo "Could not add Contact";
 }
 ?>
