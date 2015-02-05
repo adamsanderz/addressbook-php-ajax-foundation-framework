@@ -17,6 +17,7 @@ $(document).ready(function(){
 				$('#addModal').foundation('reveal','close');
 				showContacts();
 			});
+			document.addContact.reset(); //need to reset form because it is not submitted and retains previous values
 			return false;
 	});
 
@@ -43,10 +44,10 @@ $(document).ready(function(){
 		//Define variables postdata, that will be submitted as post variable
 		var postData = {};
 		//Loop through all the data-elements when we don't know no of attributes
-		//$.each($(this).data(), function(k,v) {
-		//    postData[k] = v;
-		//});
-		postData["cid"] = $("#deleteContact").attr('data-cid');
+		$.each($(this).data(), function(k,v) {
+		    postData[k] = v;
+		});
+		//postData["cid"] = $(this).attr('data-cid');
         $.ajax({
             type: 'POST',
             url: 'delete_contact.php',
