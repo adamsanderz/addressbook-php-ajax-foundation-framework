@@ -52,9 +52,9 @@ $contacts = $db->resultset();
                       <div class="large-4 columns"><label>Phone Number <input name="phone" type="text" placeholder="Phone Number" value="<?php echo $contact->phone; ?>" /></label></div>
                       <div class="large-4 columns"><label>Contact Group 
                         <select name="contact_group">
-                          <option value="Family" <?php echo $contact->group=='Family'?'selected':''; ?> >Family</option>
-                          <option value="Friends" <?php echo $contact->group=='Friends'?'selected':''; ?> >Friends</option>
-                          <option value="Business" <?php echo $contact->group == 'Business'?'selected':''; ?> >Business</option>
+                          <option value="Family" <?php echo $contact->contact_group=='Family'?'selected':''; ?> >Family</option>
+                          <option value="Friends" <?php echo $contact->contact_group=='Friends'?'selected':''; ?> >Friends</option>
+                          <option value="Business" <?php echo $contact->contact_group == 'Business'?'selected':''; ?> >Business</option>
                         </select>
                       </label></div>
                       <div class="row">
@@ -66,7 +66,7 @@ $contacts = $db->resultset();
                         <div class="large-4 columns"><label>District
                           <select name="district">
                             <?php foreach ($districts as $key => $value): ?>
-                              <option value="<?php echo $key; ?>" <?php echo $key==$district?'selected':''; ?> ><?php echo $value?></option>
+                              <option value="<?php echo $key; ?>" <?php echo $key==$contact->district?'selected':''; ?> ><?php echo $value?></option>
                             <?php endforeach; ?>
                           </select>
                         </label></div>
