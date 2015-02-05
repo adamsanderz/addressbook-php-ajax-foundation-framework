@@ -31,21 +31,21 @@
                 <select name="contact_group"><option value="Family">Family</option><option value="Friends">Friends</option><option value="Business">Business</option></select>
               </label></div>
             </div>
-              <div class="row">
-                <div class="large-6 columns"><label>Address1 <input name="address1" type="text" placeholder="Enter Street, House Number, GPO" /></label></div>
-                <div class="large-6 columns"><label>Address2 <input name="address2" type="text" placeholder="Enter Additional Address" /></label></div>
-              </div>
-              <div class="row">
-                <div class="large-4 columns"><label>City <input name="city" type="text" placeholder="Enter Your City" /></label></div>
-                <div class="large-4 columns"><label>District
-                  <select name="district">
-                    <option>Select District</option>
-                    <?php foreach ($districts as $key => $value): ?>
-                      <option value="<?php echo $key; ?>"><?php echo $value?></option>
-                    <?php endforeach; ?> 
-                  </select>
-                </label></div>
-                <div class="large-4 columns"><label>Zone/State <input name="state" type="text" placeholder="Enter Zone or State" /></label></div>
+            <div class="row">
+              <div class="large-6 columns"><label>Address1 <input name="address1" type="text" placeholder="Enter Street, House Number, GPO" /></label></div>
+              <div class="large-6 columns"><label>Address2 <input name="address2" type="text" placeholder="Enter Additional Address" /></label></div>
+            </div>
+            <div class="row">
+              <div class="large-4 columns"><label>City <input name="city" type="text" placeholder="Enter Your City" /></label></div>
+              <div class="large-4 columns"><label>District
+                <select name="district">
+                  <option>Select District</option>
+                  <?php foreach ($districts as $key => $value): ?>
+                    <option value="<?php echo $key; ?>"><?php echo $value?></option>
+                  <?php endforeach; ?> 
+                </select>
+              </label></div>
+              <div class="large-4 columns"><label>Zone/State <input name="state" type="text" placeholder="Enter Zone or State" /></label></div>
             </div>
             <div class="row">
               <div class="large-12 columns"><label>Notes<textarea name="notes" placeholder="Enter Optional Notes"></textarea></label></div>
