@@ -35,7 +35,7 @@
                 <div class="large-6 columns"><label>Address2 <input name="address2" type="text" placeholder="Enter Additional Address" /></label></div>
               </div>
               <div class="row">
-                <div class="large-4 columns"><label>City <input name="city" type="text" placeholder="Enter Email address" /></label></div>
+                <div class="large-4 columns"><label>City <input name="city" type="text" placeholder="Enter Your City" /></label></div>
                 <div class="large-4 columns"><label>District
                   <select name="district">
                     <option>Select District</option>
