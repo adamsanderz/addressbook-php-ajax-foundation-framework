@@ -38,6 +38,7 @@
                 <div class="large-4 columns"><label>City <input name="city" type="text" placeholder="Enter Email address" /></label></div>
                 <div class="large-4 columns"><label>District
                   <select name="district">
+                    <option>Select District</option>
                     <?php foreach ($districts as $key => $value): ?>
                       <option value="<?php echo $key; ?>" <?php echo $key==$district?'selected':''; ?> ><?php echo $value?></option>
                     <?php endforeach; ?> 
