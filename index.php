@@ -30,6 +30,7 @@
               <div class="large-4 columns"><label>Contact Group 
                 <select name="contact_group"><option value="Family">Family</option><option value="Friends">Friends</option><option value="Business">Business</option></select>
               </label></div>
+            </div>
               <div class="row">
                 <div class="large-6 columns"><label>Address1 <input name="address1" type="text" placeholder="Enter Street, House Number, GPO" /></label></div>
                 <div class="large-6 columns"><label>Address2 <input name="address2" type="text" placeholder="Enter Additional Address" /></label></div>
