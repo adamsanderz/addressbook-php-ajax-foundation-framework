@@ -8,6 +8,7 @@ $db = new Database;
 $db->query('delete from contacts where id = :id');
 
 //Bind values to vars
+print_r($_POST);
 $db->bind(':id', $_POST['cid']);
 
 if($db->execute()){
