@@ -34,6 +34,30 @@ $(document).ready(function(){
 			});
 			return false;
 	});
+
+	//Delete contact
+		//Edit contact
+	$(document).on('click','#deleteContact',function(){
+		//Show Loader Image
+		$('#loaderImage').show();
+
+		//Define variables
+		var link = $("#deleteRecord");
+		var formData = new FormData();
+    
+	    // perform validations
+    
+    	// append to formData
+		formData.append("contact_id", link.attr("data-contact-id");
+
+		//Post data from form
+		$.post("delete_contact.php",formData.serialize())
+			.done(function(data){
+				console.log(data);
+				showContacts();
+			});
+			return false;
+	});
 });
 
 //Show Contacts function
