@@ -38,7 +38,7 @@ $contacts = $db->resultset();
             <td><?php echo $contact->contact_group; ?></td>
             <td><ul class="button-group radius">
                 <li><a href="#" class="button tiny" data-reveal-id="editModal<?php echo $contact->id; ?>" data-contact-id="<?php echo $contact->id; ?>" >Edit</a></li>
-                <li><a href="#" class="button tiny [secondary alert success]" data-reveal-id="deleteModal<?php echo $contact->id; ?>" data-contact-id="<?php echo $contact->id; ?>" >Delete</a></li>
+                <li><a href="#" class="button tiny [secondary alert success]" id="deleteContact" data-contact-id="<?php echo $contact->id; ?>" >Delete</a></li>
               </ul>
                 <div id="editModal<?php echo $contact->id; ?>" data-cid="<?php echo $contact->id; ?>" class="reveal-modal editModal" data-reveal>
                   <h2>Edit Contact</h2>
@@ -62,7 +62,7 @@ $contacts = $db->resultset();
                         <div class="large-6 columns"><label>Address2 <input name="address2" type="text" placeholder="Enter Additional Address" value="<?php echo $contact->address2; ?>" /></label></div>
                       </div>
                       <div class="row">
-                        <div class="large-4 columns"><label>City <input name="city" type="text" placeholder="Enter Email address" /></label></div>
+                        <div class="large-4 columns"><label>City <input name="city" type="text" placeholder="Enter City where you live" value="<?php echo $contact->city; ?>" /></label></div>
                         <div class="large-4 columns"><label>District
                           <select name="district">
                             <?php foreach ($districts as $key => $value): ?>
