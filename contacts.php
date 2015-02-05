@@ -37,8 +37,8 @@ $contacts = $db->resultset();
             </ul></td>
             <td><?php echo $contact->contact_group; ?></td>
             <td><ul class="button-group radius">
-                <li><a href="#" class="button tiny" data-reveal-id="editModal<?php echo $contact->id; ?>" data-contact-id="<?php echo $contact->id; ?>" >Edit</a></li>
-                <li><a href="#" class="button tiny [secondary alert success]" id="deleteContact" data-contact-id="<?php echo $contact->id; ?>" >Delete</a></li>
+                <li><a href="#" class="button tiny" data-reveal-id="editModal<?php echo $contact->id; ?>" data-cid="<?php echo $contact->id; ?>" >Edit</a></li>
+                <li><a href="#" class="button tiny [secondary alert success]" id="deleteContact" data-cid="<?php echo $contact->id; ?>" >Delete</a></li>
               </ul>
                 <div id="editModal<?php echo $contact->id; ?>" data-cid="<?php echo $contact->id; ?>" class="reveal-modal editModal" data-reveal>
                   <h2>Edit Contact</h2>
