@@ -46,16 +46,11 @@ $(document).ready(function(){
 		//$.each($(this).data(), function(k,v) {
 		//    postData[k] = v;
 		//});
-		postData[cid] = $(this).data('cid');
+		postData["cid"] = $("#deleteContact").attr('data-cid');
         $.ajax({
-        	//crossDomain: true,
-        	//cache: false,
             type: 'POST',
             url: 'delete_contact.php',
             data: postData,
-            //data: {"cid":cid}, 
-            //contentType:"application/json; charset=utf-8",
-            //dataType: "json",
             success: function (data) {
                 console.log(data); //data comming from echo of delete_contact
                 showContacts();
