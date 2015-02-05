@@ -28,7 +28,7 @@
               <div class="large-4 columns"><label>Email <input name="email" type="email" placeholder="Enter Email address" /></label></div>
               <div class="large-4 columns"><label>Phone Number <input name="phone" type="text" placeholder="Phone Number" /></label></div>
               <div class="large-4 columns"><label>Contact Group 
-                <select name="contact_group"><option value="family">Family</option><option value="friends">Friends</option><option value="business">Business</option></select>
+                <select name="contact_group"><option value="Family">Family</option><option value="Friends">Friends</option><option value="Business">Business</option></select>
               </label></div>
               <div class="row">
                 <div class="large-6 columns"><label>Address1 <input name="address1" type="text" placeholder="Enter Street, House Number, GPO" /></label></div>
