@@ -40,7 +40,7 @@
                   <select name="district">
                     <option>Select District</option>
                     <?php foreach ($districts as $key => $value): ?>
-                      <option value="<?php echo $key; ?>" <?php echo $key==$district?'selected':''; ?> ><?php echo $value?></option>
+                      <option value="<?php echo $key; ?>"><?php echo $value?></option>
                     <?php endforeach; ?> 
                   </select>
                 </label></div>
